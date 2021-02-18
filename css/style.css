@@ -237,7 +237,7 @@ body {
 }
 
 .restaurant {
-  background: url("/img/u_bg.jpg");
+  background: url("../img/u_bg.jpg");
   background-size: cover;
   background-position: center;
   color: #fff;
