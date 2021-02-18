@@ -319,11 +319,11 @@ body {
   margin-top: 15px;
 }
 
+.e-store__container {
+  justify-content: flex-start;
+}
 .e-store__content {
   text-align: left;
-  justify-content: flex-start;
-  width: 100%;
-  padding: 0 20px;
 }
 .e-store__header {
   margin-bottom: 15px;
