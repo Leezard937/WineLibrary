@@ -190,7 +190,7 @@ body {
 .services__item-text {
   font-size: 14px;
   line-height: 20px;
-  color: #b3b3b3;
+  color: #828282;
 }
 
 .store, .e-store {
@@ -319,6 +319,9 @@ body {
   margin-top: 15px;
 }
 
+.e-store {
+  margin-top: -5px;
+}
 .e-store__container {
   justify-content: flex-start;
 }
