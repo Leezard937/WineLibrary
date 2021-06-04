@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Library</title>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <link href="air-datepicker-master/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
+    <script src="air-datepicker-master/dist/js/datepicker.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="main-header ibg">
+        <!-- BACKGROUND IMAGE FOR HEADER BLOCK HERE -->
+        <img src="img/booking_header-bg.jpg" alt="" class="ibg-image">
+        <div class="nav-wrap">
+            <nav class="main-nav">
+                <div class="main-nav__overlay"></div>
+                <ul class="main-nav__list">
+                    <li class="main-nav__item"><a href="e-store.html">Інтернет-магазин</a></li>
+                    <li class="main-nav__item"><a href="store.html">Точка продажу</a></li>
+                    <li class="main-nav__item"><a href="restaurant.html">Ресторан</a></li>
+                    <li class="main-nav__item main-nav__item-logo">
+                        <a href="index.html" class="logo-link"><img src="img/logo.svg" alt="WineLibrary"></a>
+                    </li>
+                    <li class="main-nav__item"><a href="events.html">Івенти</a></li>
+                    <li class="main-nav__item"><a href="somelier.html">Сомельє</a></li>
+                    <li class="main-nav__item"><a href="booking.html" class="current_page">Бронювання</a></li>
+                    <li class="main-nav__item"><a href="#">Вакансії</a></li>
+                </ul>
+                <div class="main-nav__toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container main-header__container">
+            <div class="main-header__content">
+                <h1 class="main-header__header">Бронювання</h1>
+                <p class="main-header__subheader">Резервуйте місця у нашому ресторані</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="booking-container container">
+            <div class="booking">
+                <p class="booking__description">Для резервування столу оберіть в формі його номер, вказаний на плані. Наш оператор зателефонує вам протягом десяти хвилин для підтвердження бронювання та надання вам усієї необхідної інформації.</p>
+                <div class="golden-divider"></div>
+                <div class="booking-map">
+                    <img src="img/booking/restaurant_map.png" alt='Мапа ресторану "Бібліотека вина"'>
+                </div>
+
+                <div class="form">
+                    <form action="#" class="form__body">
+                        <div class="form__header"></div>
+                        <div class="form__item">
+                            <label for="name">Ім’я, по батькові</label>
+                            <input type="text" placeholder="Анатолій Анатолійович" class="form__input" id="name" name="name">
+                        </div>
+                        <div class="form__item">
+                            <label for="phone">Номер телефону</label>
+                            <input type="tel" placeholder="+38 063 123 45 67" class="form__input" id="phone" name="phone">
+                        </div>
+                        <div class="form__row">
+                            <div class="form__item">
+                                <label for="date-time">Оберіть дату та час</label>
+                               <input type="text" onfocus="blur();" placeholder="Дата / Час" name="date-time" class="form__input" id="form__input-datepicker">
+                            </div>
+                            <div class="form__item">
+                                <label for="table-select">Оберіть стіл</label>
+                                <select name="table-select" id="table-select" class="form__input">
+                                    <option value="1">Стіл №1</option>
+                                    <option value="2">Стіл №2</option>
+                                    <option value="3">Стіл №3</option>
+                                    <option value="4">Стіл №4</option>
+                                    <option value="5">Стіл №5</option>
+                                    <option value="6">Стіл №6</option>
+                                    <option value="7">Стіл №7</option>
+                                    <option value="8">Стіл №8</option>
+                                    <option value="9">Стіл №9</option>
+                                    <option value="10">Стіл №10</option>
+                                    <option value="11">Стіл №11</option>
+                                    <option value="12">Стіл №12</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="form__button">Забронювати</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer e-store-footer">
+        <div class="container e-store-footer__container">
+            <h2 class="main-footer__header">Новини</h2>
+
+            <div class="e-store-footer__inner">
+                <div class="e-store-footer__image ibg">
+                    <img src="img/e-store-footer-image.jpg" alt="" class="ibg-image">
+                </div>
+                <div class="e-store-footer__content">
+                    <h3 class="main-footer__subheader">Знижка на французьке вино Bad Boy</h3>
+                    <hr>
+                    <p>«Bad Boy» - це вино з історією, воно виникло з революції, протесту всесвітньо відомого винороба
+                        Бордо Жана-Люка Тюневена, людини з якого почався рух «гаражист». </p>
+                    <p>Перед нами потужне, насичене вино зі стиглим ароматом чорної смородини, вишневого пирога, ожини і
+                        лакриці. Повним, танін смаком зі щедрими фруктовими тонами сливи, вишні, чорної смородини і
+                        червоних фруктів, які створюють шовковисту структуру.</p>
+                    <a href="#">Детальніше</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main-dist.js"></script>
+    <script>
+        $('#form__input-datepicker').datepicker({
+        // Можно выбрать тольо даты, идущие за сегодняшним днем, включая сегодня
+            minDate: new Date(),
+            timepicker: true
+        });
+
+
+    </script>
+</body>
+
+</html>
