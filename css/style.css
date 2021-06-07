@@ -2144,7 +2144,7 @@ body::-webkit-scrollbar {
 .position__info {
   color: #A0A0A0;
   text-align: right;
-  max-width: 25%;
+  max-width: 30%;
 }
 
 @media screen and (max-width: 564px) {
