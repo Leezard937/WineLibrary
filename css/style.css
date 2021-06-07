@@ -1921,7 +1921,7 @@ body::-webkit-scrollbar {
 
 .menu {
   widht: 100%;
-  margin-top: 100px;
+  margin-top: 30px;
 }
 
 .menu__item {
@@ -1955,6 +1955,11 @@ body::-webkit-scrollbar {
           justify-content: flex-end;
 }
 
+.menu .page-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 .thumb {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1964,7 +1969,7 @@ body::-webkit-scrollbar {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 50px 0;
+  padding: 70px 0;
 }
 
 .thumb__image {
