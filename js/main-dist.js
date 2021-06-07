@@ -1,5 +1,6 @@
 "use strict";
 
+
 function ibg(){
 
     let ibg=document.querySelectorAll(".ibg");
@@ -221,6 +222,9 @@ let eventsSortList = document.querySelector('.events__sort-select');
 
 
 
+    const slideDown = elem => elem.style.height = `${elem.scrollHeight}px`;
+    const slideBack = elem => elem.style.height = 0;
+
     let openButtons = Array.from(document.querySelectorAll('.thumb__control'));
     let restPositions = Array.from(document.querySelectorAll('.positions'));
     
@@ -229,8 +233,12 @@ let eventsSortList = document.querySelector('.events__sort-select');
         openButtons[i].addEventListener('click', function() {
             if(!restPositions[i].classList.contains('positions__opened')) {
                 restPositions[i].classList.add('positions__opened');
+                openButtons[i].classList.add('thumb__control-active');
+                slideDown(restPositions[i]);
             } else {
                 restPositions[i].classList.remove('positions__opened');
+                openButtons[i].classList.remove('thumb__control-active');
+                slideBack(restPositions[i]);
             }
         });
     }
