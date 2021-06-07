@@ -143,13 +143,15 @@ let currentEvents = Array.from(document.querySelectorAll('.events__item:not(.eve
 
 
 //скрываем прошедшие ивенты по клику на чекбокс
-    hidePassedEvents.addEventListener('change', (e) => {
-        if(hidePassedEvents.checked) {
-            passedEvents.forEach(element => element.style.display = "none");
-        } else if (!hidePassedEvents.checked) {
-            passedEvents.forEach(element => element.style.display = "");
-        }
-    });
+    if(hidePassedEvents) {
+        hidePassedEvents.addEventListener('change', (e) => {
+            if(hidePassedEvents.checked) {
+                passedEvents.forEach(element => element.style.display = "none");
+            } else if (!hidePassedEvents.checked) {
+                passedEvents.forEach(element => element.style.display = "");
+            }
+        });
+    }
 //--------------------------------------------
 
 let rEvents = [];
@@ -209,9 +211,27 @@ passedEvents.forEach(element => document.querySelector('.events').appendChild(el
 //-----------------------------------------
 
 let eventsSortList = document.querySelector('.events__sort-select');
+    if(eventsSortList) {
+        eventsSortList.addEventListener('change', (e) => {
+            if(eventsSortList.selectedIndex == 1) {
+                sortByDate();
+            }
+        });
+    }
 
-    eventsSortList.addEventListener('change', (e) => {
-        if(eventsSortList.selectedIndex == 1) {
-            sortByDate();
-        }
-    });
+
+
+    let openButtons = Array.from(document.querySelectorAll('.thumb__control'));
+    let restPositions = Array.from(document.querySelectorAll('.positions'));
+    
+    for(let i = 0; i < openButtons.length; i++) {
+        console.log(openButtons[i]);
+        openButtons[i].addEventListener('click', function() {
+            if(!restPositions[i].classList.contains('positions__opened')) {
+                restPositions[i].classList.add('positions__opened');
+            } else {
+                restPositions[i].classList.remove('positions__opened');
+            }
+        });
+    }
+    
