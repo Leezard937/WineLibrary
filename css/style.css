@@ -2172,4 +2172,181 @@ body::-webkit-scrollbar {
 .position__price {
   color: #c99d57;
 }
+
+.event-form {
+  box-shadow: 0 0 12px #000;
+  width: 400px;
+  position: fixed;
+  top: -50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 30000;
+  background: #fff;
+  padding: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.event-form-active {
+  top: 50%;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+@media screen and (max-width: 698px) {
+  .event-form {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.event-form__event {
+  margin: 20px 0;
+}
+
+.event-form__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.event-form__item label {
+  font-style: italic;
+}
+
+.event-form__input {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background: #fff;
+  border: 1px solid #A1804E;
+}
+
+.event-form__button {
+  width: 100%;
+  padding: 15px 20px;
+  background: #A1804E;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  margin-top: 10px;
+}
+
+.event-name {
+  font-weight: 500;
+}
+
+.event-date {
+  color: #A0A0A0;
+}
+
+.closeFormButton {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.closeFormButton span {
+  width: 40px;
+  height: 2px;
+  display: block;
+  background: #A1804E;
+}
+
+.closeFormButton span:first-child {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-bottom: -1px;
+}
+
+.closeFormButton span:last-child {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+select.event-form__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.form-overlay {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: -100%;
+  left: 0;
+  z-index: 29000;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+@media screen and (max-width: 698px) {
+  .form-overlay {
+    display: none;
+  }
+}
+
+.form-overlay-active {
+  top: 0;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
 /*# sourceMappingURL=style.css.map */
