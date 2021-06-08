@@ -45,6 +45,56 @@
     </header>
 
     <main class="main">
+        <div class="form-overlay"></div>
+        <form action="mail.php" class="event-form" method="POST">
+            <div class="closeFormButton">
+                <span></span>
+                <span></span>
+            </div>
+            <h3 class="event-form__header">Квиток на захід</h3>
+            <div class="event-form__event">
+                <span class="event-name">Дегустація</span>
+                —
+                <span class="event-date">12.03.21</span>
+            </div>
+            <input type="hidden" name="event-name" value="" class="event-form__hidden-name">
+            <input type="hidden" name="event-date" value="" class="event-form__hidden-date">
+            <div class="event-form__item">
+                <label for="table">Оберіть стіл *</label>
+                <select name="table" required id="table" class="event-form__input">
+                    <option value="1">Стіл №1</option>
+                    <option value="2">Стіл №2</option>
+                    <option value="3">Стіл №3</option>
+                    <option value="4">Стіл №4</option>
+                    <option value="5">Стіл №5</option>
+                    <option value="6">Стіл №6</option>
+                    <option value="7">Стіл №7</option>
+                    <option value="8">Стіл №8</option>
+                    <option value="9">Стіл №9</option>
+                    <option value="10">Стіл №10</option>
+                    <option value="11">Стіл №11</option>
+                    <option value="12">Стіл №12</option>
+                </select>
+            </div>
+            <div class="event-form__item">
+                <label for="table-place">Оберіть місце *</label>
+                <select name="table-place" required id="table-place" class="event-form__input">
+                    <option value="1">Стіл №1</option>
+                    <option value="2">Стіл №2</option>
+                    <option value="3">Стіл №3</option>
+                    <option value="4">Стіл №4</option>
+                </select>
+            </div>
+            <div class="event-form__item">
+                <label for="name">Ім’я, по батькові *</label>
+                <input type="text" required id="name" name="name" class="event-form__input">
+            </div>
+            <div class="event-form__item">
+                <label for="phone">Номер телефону *</label>
+                <input type="tel" required id="phone" name="phone" class="event-form__input event-form__input-tel">
+            </div>
+            <button class="event-form__button" type="submit">Забронювати</button>
+        </form>
         <div class="container events-container">
             <div class="events">
                 <div class="events__control">
@@ -115,7 +165,7 @@
                             продукцію у повітряні. Ми пакуємо продукцію у повітряні подушки Airbag для безпечного
                             транспортування вашого замовлення. Ми пакуємо продукцію у повітряні.</p>
                         <div class="events__buttons">
-                            <a href="#" class="btn btn-golden">Зарезервувати</a>
+                            <a href="#" class="btn btn-golden reserve-button">Зарезервувати</a>
                         </div>
                     </div>
                 </div>
@@ -145,7 +195,7 @@
                             продукцію у повітряні. Ми пакуємо продукцію у повітряні подушки Airbag для безпечного
                             транспортування вашого замовлення. Ми пакуємо продукцію у повітряні.</p>
                         <div class="events__buttons">
-                            <a href="#" class="btn btn-golden">Зарезервувати</a>
+                            <a href="#" class="btn btn-golden reserve-button">Зарезервувати</a>
                         </div>
                     </div>
                 </div>
@@ -175,7 +225,7 @@
                             продукцію у повітряні. Ми пакуємо продукцію у повітряні подушки Airbag для безпечного
                             транспортування вашого замовлення. Ми пакуємо продукцію у повітряні.</p>
                         <div class="events__buttons">
-                            <a href="#" class="btn btn-golden">Зарезервувати</a>
+                            <a href="#" class="btn btn-golden reserve-button">Зарезервувати</a>
                         </div>
                     </div>
                 </div>
@@ -205,7 +255,7 @@
                             продукцію у повітряні. Ми пакуємо продукцію у повітряні подушки Airbag для безпечного
                             транспортування вашого замовлення. Ми пакуємо продукцію у повітряні.</p>
                         <div class="events__buttons">
-                            <a href="#" class="btn btn-golden">Зарезервувати</a>
+                            <a href="#" class="btn btn-golden reserve-button">Зарезервувати</a>
                         </div>
                     </div>
                 </div>
@@ -235,7 +285,7 @@
                             продукцію у повітряні. Ми пакуємо продукцію у повітряні подушки Airbag для безпечного
                             транспортування вашого замовлення. Ми пакуємо продукцію у повітряні.</p>
                         <div class="events__buttons">
-                            <a href="#" class="btn btn-golden">Зарезервувати</a>
+                            <a href="#" class="btn btn-golden reserve-button">Зарезервувати</a>
                         </div>
                     </div>
                 </div>
