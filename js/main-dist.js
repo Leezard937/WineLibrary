@@ -242,4 +242,49 @@ let eventsSortList = document.querySelector('.events__sort-select');
             }
         });
     }
-    
+
+
+
+    let eventForm = document.querySelector('.event-form');
+    let eventToggle = Array.from(document.querySelectorAll('.reserve-button'));
+    let closeFormButton = document.querySelector('.closeFormButton');
+    let eName,
+        eDate;
+    let eInfo = [];
+    let isFormOpened;
+
+    eventToggle.forEach(element => {
+        element.addEventListener('click', function(event) {
+            event.preventDefault();
+            eventForm.classList.add('event-form-active');
+            document.body.classList.add('modal-open');
+            if(document.body.clientWidth >= 698) {
+                document.querySelector('.form-overlay').classList.add('form-overlay-active');
+                document.querySelector('.form-overlay-active').addEventListener('click', function(){
+                    eventForm.classList.remove('event-form-active');
+                    document.body.classList.remove('modal-open');
+                    document.querySelector('.form-overlay').classList.remove('form-overlay-active');
+                    isFormOpened = false;
+                });
+            }
+            isFormOpened = true;
+        });
+    });
+
+    closeFormButton.addEventListener('click', function() {
+        eventForm.classList.remove('event-form-active');
+        document.body.classList.remove('modal-open');
+        if(document.body.clientWidth >= 698) {
+            document.querySelector('.form-overlay').classList.remove('form-overlay-active');
+        }
+        isFormOpened = false;
+    });
+
+    for(let i = 0; i < eventToggle.length; i++) {
+        eventToggle[i].addEventListener('click', function() {
+            document.querySelector('.event-name').innerText = rEvents[i].type;
+            document.querySelector('.event-date').innerText = rEvents[i].day + '.' + rEvents[i].month + '.' + rEvents[i].year;
+            document.querySelector('.event-form__hidden-name').value = rEvents[i].type;
+            document.querySelector('.event-form__hidden-date').value = rEvents[i].day + '.' + rEvents[i].month + '.' + rEvents[i].year;
+        });
+    }
